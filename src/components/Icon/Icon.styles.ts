@@ -1,6 +1,5 @@
-import styled, { CSSObject } from '@emotion/styled';
-
 import { getBrandColorCode } from '@cocstorage/ui';
+import styled, { CSSObject } from '@emotion/styled';
 
 import type { BellOutlined } from '../../assets/icons';
 

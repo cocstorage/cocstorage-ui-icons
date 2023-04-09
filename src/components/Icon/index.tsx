@@ -1,8 +1,9 @@
 import { SVGProps } from 'react';
 
-import * as SvgIcons from '../../assets/icons';
 import { BrandColor, Color, GenericComponentProps } from '@cocstorage/ui';
+
 import { StyledIcon } from './Icon.styles';
+import * as SvgIcons from '../../assets/icons';
 
 export interface IconProps extends GenericComponentProps<SVGProps<SVGElement>> {
   name: keyof typeof SvgIcons;

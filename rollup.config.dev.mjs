@@ -2,23 +2,23 @@ import { DEFAULT_EXTENSIONS } from '@babel/core';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 import svgr from '@svgr/rollup';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
-import packageJson from './package.json';
-
 const outputs = [
   {
-    file: packageJson.main,
+    file: 'dist/index.js',
     format: 'cjs',
-    exports: 'auto'
+    interop: 'auto',
+    exports: 'auto',
+    sourcemap: true
   },
   {
-    file: packageJson.module,
-    format: 'esm',
-    exports: 'auto'
+    file: 'dist/index.es.js',
+    format: 'es',
+    exports: 'auto',
+    sourcemap: true
   }
 ];
 
@@ -34,7 +34,8 @@ export default outputs.map((output) => {
       babel({
         babelHelpers: 'runtime',
         exclude: 'node_modules/**',
-        plugins: ['@babel/plugin-transform-runtime'],
+        presets: ['@emotion/babel-preset-css-prop'],
+        plugins: ['@emotion', '@babel/plugin-transform-runtime'],
         extensions
       }),
       commonjs({
@@ -44,8 +45,7 @@ export default outputs.map((output) => {
       resolve({
         extensions
       }),
-      svgr(),
-      terser()
+      svgr()
     ]
   };
 });
