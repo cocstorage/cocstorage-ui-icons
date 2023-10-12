@@ -29,7 +29,7 @@
     "convention": "pnpm prettier && eslint --fix \"**/*.{js,ts,tsx}\"",
     "prepublishOnly": "pnpm build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=7f414ea7c93a",
     "prepare": "husky install"
   },
