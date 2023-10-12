@@ -40,5 +40,5 @@ export { default as UserOutlined } from './user-outlined.svg';
 export { default as ViewOutlined } from './view-outlined.svg';
 export { default as WriteOutlined } from './write-outlined.svg';
 export { default as ListOutlined } from './list-outlined.svg';
-export { default as GitOutlined } from './gif-outlined.svg';
+export { default as GifOutlined } from './gif-outlined.svg';
 export { default as ThemeOutlined } from './theme-outlined.svg';
