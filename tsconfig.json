@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es5",
     "module": "esnext",
     "lib": ["dom", "esnext"],
@@ -11,6 +10,8 @@
     "declaration": true,
     "declarationDir": ".",
     "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
     "paths": {
       "@assets": ["./src/assets"],
       "@assets/*": ["./src/assets/*"],
@@ -21,13 +22,6 @@
     },
     "jsxImportSource": "@emotion/react"
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "global.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
 }

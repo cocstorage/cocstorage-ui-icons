@@ -1,18 +1,15 @@
-import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import Icon from '.';
 
-export default {
+const meta: Meta<typeof Icon> = {
   title: 'Components/Icon',
   component: Icon
-} as ComponentMeta<typeof Icon>;
-
-const Template: ComponentStory<typeof Icon> = function Template(args) {
-  return <Icon {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {
-  name: 'CommunityFilled',
-  color: 'primary'
+export default meta;
+type Story = StoryObj<typeof Icon>;
+
+export const Default: Story = {
+  render: (args) => <Icon {...args} />
 };

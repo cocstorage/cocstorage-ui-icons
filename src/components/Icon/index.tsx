@@ -10,7 +10,13 @@ export interface IconProps extends GenericComponentProps<SVGProps<SVGElement>> {
   color?: BrandColor | Color;
 }
 
-function Icon({ name, viewBox = '0 0 24 24', color, customStyle, ...props }: IconProps) {
+function Icon({
+  name = 'InfoOutlined',
+  viewBox = '0 0 24 24',
+  color,
+  customStyle,
+  ...props
+}: IconProps) {
   const SvgIcon = SvgIcons[name];
   const StyledSvgIcon = StyledIcon(SvgIcon);
 
